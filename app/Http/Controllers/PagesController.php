@@ -21,7 +21,6 @@ class PagesController extends Controller
     public function post(Post $post)
     {
         $stop_comment = DB :: table('settings')->where('name', 'stop_comment')->value('value');
-       // $post= DB::table('posts')->find($id);
         return view('content.post',compact('post','stop_comment'));
     }
     public function store(Request $request)
